@@ -79,28 +79,6 @@ Escape de HTML na renderização
 Bootstrap 5 + Icons
 
 sql
-Copiar código
+
 
 ---
-
-# 7) (Opcional) Adicione o `schema.sql`
-
-Crie um arquivo **`schema.sql`** em `TODO-list` com:
-
-```sql
--- schema.sql
-CREATE DATABASE IF NOT EXISTS todo_db
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_general_ci;
-
-USE todo_db;
-
-CREATE TABLE IF NOT EXISTS tarefas (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  description TEXT NULL,
-  due_date DATE NULL,
-  due_time TIME NULL,
-  done TINYINT(1) NOT NULL DEFAULT 0,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
